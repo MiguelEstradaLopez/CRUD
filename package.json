@@ -4,7 +4,8 @@
   "description": "MikiCrud",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,7 @@
   },
   "keywords": [
     "crud",
-    "2562432"
+    "3035528"
   ],
   "author": "MIKI",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "body-parser": "^2.2.0",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "morgan": "^1.10.0",
     "mysql2": "^3.14.0"
   },
   "devDependencies": {
