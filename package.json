@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/MIKI0w0/CRUD/issues"
   },
-  "homepage": "https://github.com/MIKI0w0/CRUD#readme"
+  "homepage": "https://github.com/MIKI0w0/CRUD#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
