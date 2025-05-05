@@ -1,4 +1,4 @@
-import { dbconfing } from "../config/db.config";
+import { dbconfing } from "../config/db.config.js"; 
 import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool(dbconfing);

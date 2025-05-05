@@ -1,6 +1,7 @@
 {
   "name": "crud",
   "version": "1.0.0",
+  "type": "module",
   "description": "MikiCrud",
   "main": "index.js",
   "scripts": {
