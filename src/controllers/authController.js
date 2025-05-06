@@ -13,7 +13,7 @@ export const registerUser = async (req, res) => {
         }
 
         // Validación de contraseña
-        if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(password)) {
+        if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{12,}$/.test(password)) {
             return res.status(400).json({ 
                 message: "La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y mínimo 8 caracteres"
             });
