@@ -4,13 +4,14 @@ import * as productModel from '../models/productModel.js'
 
 export const getAllproducts = async (req, res) => {
     try {
-        const product = await productModel.getproducts()
-        console.log(products)
-        res.status(201).json(product)
+        const product = await productModel.getproducts();
+        console.log(product); 
+        res.status(200).json(product); 
     } catch (error) {
-        res.status(500).json({message: error.messege})
+        console.error(error); 
+        res.status(500).json({ message: error.message }); 
     }
-}
+};
 
 export const getproductbyid = async (req,res) => {
     try{
@@ -44,7 +45,7 @@ export const createNewProduct = async(req, res) => {
 export const updateproduct = async (req, res) => {
     try{
         const productId = req.params.id;
-
+        const { name , price , description } = req.body;
         await productModel.updateproduct(productId, {name, price, description});
         res.status(200).json({ message: 'producto actualizado correctamente'});
     } catch (error) {

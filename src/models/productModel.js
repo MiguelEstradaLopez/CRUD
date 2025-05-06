@@ -16,13 +16,13 @@ export const getproductbyid = async (productId) => {
 };
 
 // Agregar un producto
-export const addproduct = async (productData) => {
-    const { name, price, descripcion } = productData;
+export const createProduct = async (productData) => {
+    const { name, price, description } = productData; 
     const [result] = await pool.query(
         'INSERT INTO products (name, price, description) VALUES (?, ?, ?)',
         [name, price, description]
     );
-    return { id: result.insertId, ...product };
+    return { id: result.insertId, name, price, description }; 
 };
 
 // Eliminar un producto
